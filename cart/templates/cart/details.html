@@ -1,0 +1,199 @@
+
+{% extends 'shop/index.html' %}
+{% load static %}
+
+
+{% block title %}<title>Home three || Vonia</title>{% endblock %}
+{% block content %}
+		<!-- header-end -->
+		<!-- product-details-area-start -->
+		<div class="shop-1-area">
+			<div class="container">
+				<div class="breadcrumb">
+					<a href="{% url 'shop:index' %}" title="Return to Home">
+						<i class="icon-home"></i>
+					</a>
+					<span class="navigation-pipe">></span>
+					<span class="navigation-page">
+						<a href="product-details.html" title="Furniture ">
+							<span>Furniture </span>
+						</a>
+						<span class="navigation-pipe nav-pipe-2">></span>
+						Faded Short Sleeves T-shirt
+					</span>
+				</div>
+				<div class="row">
+					<div class="col-md-5 col-sm-6 col-xs-12">
+						<div class="picture-tab">
+                            <!-- Nav tabs -->
+                            <ul class="pic-tabs" role="tablist">
+    							<li role="presentation" class="active"><a href="product-details.html#picture-1" aria-controls="picture-1" role="tab" data-toggle="tab"><img src="http://preview.hasthemes.com/vonia-preview/vonia/img/tab-pro/1.jpg" alt="" /></a></li>
+							    <li role="presentation"><a href="product-details.html#picture-2" aria-controls="picture-2" role="tab" data-toggle="tab"><img src="http://preview.hasthemes.com/vonia-preview/vonia/img/tab-pro/2.jpg" alt="" /></a></li>
+							    <li role="presentation"><a href="product-details.html#picture-3" aria-controls="picture-3" role="tab" data-toggle="tab"><img src="http://preview.hasthemes.com/vonia-preview/vonia/img/tab-pro/3.jpg" alt="" /></a></li>
+							    <li role="presentation"><a href="product-details.html#picture-4" aria-controls="picture-4" role="tab" data-toggle="tab"><img src="http://preview.hasthemes.com/vonia-preview/vonia/img/tab-pro/5.jpg" alt="" /></a></li>
+                            </ul>
+                            <div class="tab-content">
+								<div role="tabpanel" class="tab-pane active fade in" id="picture-1">
+									<div class="single-product">
+										<div class="product-img">
+											<a href="product-details.html">
+												<img src="img/tab-pro/faded-short-sleeves-tshirt.jpg" alt="" />
+											</a>
+											<span class="new">new</span>
+											<span class="sale">sale!</span>
+										</div>
+									</div>
+								</div>
+								<div role="tabpanel" class="tab-pane fade" id="picture-2">
+									<div class="single-product">
+										<div class="product-img">
+											<a href="product-details.html">
+												<img src="img/tab-pro/lamp2.jpg" alt="" />
+											</a>
+											<span class="new">new</span>
+											<span class="sale">sale!</span>
+										</div>
+									</div>
+								</div>
+								<div role="tabpanel" class="tab-pane fade" id="picture-3">
+									<div class="single-product">
+										<div class="product-img">
+											<a href="product-details.html">
+												<img src="img/tab-pro/lamp.jpg" alt="" />
+											</a>
+											<span class="new">new</span>
+											<span class="sale">sale!</span>
+										</div>
+									</div>
+								</div>
+								<div role="tabpanel" class="tab-pane fade" id="picture-4">
+									<div class="single-product">
+										<div class="product-img">
+											<a href="product-details.html">
+												<img src="{% static 'img/tab-pro/vass.jpg' %}" alt="" />
+											</a>
+											<span class="new">new</span>
+											<span class="sale">sale!</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-7 col-sm-6 col-xs-12 shop-content">
+						<h1>Faded Short Sleeves T-shirt</h1>
+						<p class="reference">
+							<label>Reference: </label>
+							<span>demo_1</span>
+						</p>
+						<p class="condition">
+							<label>Condition: </label>
+							<span>New product</span>
+						</p>
+						<div class="content-price">
+							<p class="price-new">
+								<span class="price-box">£ 16.84</span>
+								<span class="price-tax"> tax incl.</span>
+							</p>
+							<p class="reduction-percent">
+								<span>-15%</span>
+							</p>
+							<p class="old-price">
+								<span class="price">£ 19.81</span>
+								tax incl.
+							</p>
+						</div>
+						<div class="short-description">
+							<p>Faded short sleeves t-shirt with high neckline. Soft and stretchy material for a comfortable fit. 
+							Accessorize with a straw hat and you're ready for summer!
+							</p>
+						</div>
+						<form action="product-details.html">
+							<div class="shop-product-add">
+								<div class="add-cart">
+									<p class="quantity cart-plus-minus">
+										<label>Quantity</label>
+										<input class="text" type="text" value="1">
+										
+									</p>
+									<div class="shop-add-cart">
+										<button class="exclusive">
+											<span>Add to cart</span>
+										</button>
+									</div>
+									<ul class="usefull-links">
+										<li class="sendtofriend">
+											<a class="send-friend-button" href="product-details.html"> Send to a friend </a>
+										</li>
+										<li class="print">
+											<a class="#" href="product-details.html"> Print </a>
+										</li>
+									</ul>
+									<p class="add-wishlist">
+										<a class="add-wish" href="product-details.html">
+											 Add to wishlist 
+										</a>
+									</p>
+								</div>
+								<div class="clearfix"></div>
+								<div class="size-color">
+									<fieldset class="size">
+										<label>Size </label>
+										<div class="selector">
+											<select id="group_1" class="form-control" name="group_1">
+												<option title="S" selected="selected" value="1">S</option>
+												<option title="M" value="2">M</option>
+												<option title="L" value="3">L</option>
+											</select>
+										</div>
+									</fieldset>
+									<fieldset class="color">
+										<label>Color</label>
+										<div class="color-selector">
+											<ul>
+												<li><a class="color-1" href="product-details.html"></a></li>
+												<li><a class="color-2" href="product-details.html"></a></li>
+											</ul>
+										</div>
+									</fieldset>
+								</div>
+							</div>
+						</form>
+						<div class="clearfix"></div>
+						<p class="quantity-available">
+							<span>299</span>
+							<span>Items</span>
+						</p>
+						<p class="availability-status">
+							<span>In stock</span>
+						</p>
+						
+						<div class="product-comment">
+							<div class="comment-note clearfix">
+								<span>Rating </span>
+								<div class="star-content clearfix">
+									<span class="star star-on"></span>
+									<span class="star star-on"></span>
+									<span class="star star-on"></span>
+									<span class="star star-on"></span>
+									<span class="star star-on"></span>
+								</div>
+							</div>
+							<ul class="comments-advices">
+								<li>
+									<a class="reviews" href="product-details.html"> Read reviews (1)</a>									
+								</li>
+								<li>
+									<a class="open-comment-form" href="product-details.html"> Write a review </a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- product-details-area-end -->
+		
+		
+		<!-- footer-start -->
+{% endblock %}

@@ -1,0 +1,176 @@
+{% load static %}
+<header class="header-3">
+			<div class="header-top">
+				<div class="container">
+					<div class="row">
+						<!-- <div class="col-md-6 col-sm-6 hidden-xs">
+							
+							<div class="currencies">
+								<div class="current">
+									<span class="cur-label">Currency :</span>
+									<strong>KGS</strong>
+								</div>
+								<ul class="lan-cur">
+									<li>
+										<a href="index.html"> Dollar (USD) </a>
+									</li>
+									<li>
+										<a href="index.html"> Som (KGS) </a>
+									</li>
+								</ul>
+							</div>
+						</div> -->
+					<!-- 	<div class="col-md-6 col-sm-6 col-xs-12">
+							<div class="header-userinfo">
+								<ul class="header-links"> -->
+									<!-- <li class="first">
+										<a class="link-myaccount" title="My account" href="{% url 'shop:my_account' %}"> My account </a>
+									</li> -->
+									<!-- <li>
+										<a class="link-wishlist wishlist_block" title="My wishlist" href="{% url 'shop:wishlist' %}">My wishlist</a>
+									</li>
+									<li>
+										<a class="link-checkout" title="checkout" href="{% url 'shop:checkout' %}">Checkout</a>
+									</li> -->
+								<!-- 	<li>
+										<a class="login" title="Log in to your customer account" rel="nofollow" href="index.html">Log in</a>
+									</li> -->
+							<!-- 	</ul>
+							</div>
+						</div> -->
+					</div>
+				</div>
+			</div>
+			<div class="header-middle">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-4 col-sm-6 col-xs-12 hidden-xs">
+							<div class="search-block-top">
+								<form action="{% url 'shop:search_results' %}" method="get">
+  									<input name='q' type="text" value="" placeholder="Поиск" >
+								</form>
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-6 col-xs-12">
+							<div class="pos-logo">
+								<a href="index.html">
+									<img class="logo img-responsive" src="{% static 'img/logo.jpg' %}" alt="" />
+								</a>
+							</div>
+						</div>						
+						<div class="col-md-4 col-sm-12 col-xs-12">
+							<div class="shopping-cart">
+								<a href="{% url 'cart:cart_detail' %}" rel="nofollow" title="View my shopping cart">
+									<b>Корзина</b>
+								</a>
+							
+						<div class="col-md-4 col-sm-6 col-xs-12 visible-xs">
+							<div class="search-block-top">
+								<input class="search-query-top" type="text" value="" placeholder="Search" >
+								<button class="btn btn-default button-search" name="submit_search" type="submit"></button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- header-middle-area-end -->
+			<!-- mainmenu-area-start -->
+			<div class="main-menu-area hidden-xs hidden-sm">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="main-menu">
+								<nav>
+
+									<ul>
+										<li>
+											<a  href="{% url 'shop:index' %}">Главная</a>
+											
+										</li>
+										<li>
+											<a  href="{% url 'shop:blog' %}">Блог</a>
+											
+										</li>
+										<li>
+											<a href="{% url 'shop:shop' %}">Магазин</a>
+											
+										</li>
+										<!-- <li>
+											<a href="{% url 'shop:detail' %}">Product details</a>
+										</li> -->
+										<!-- <li>
+											<a href="{% url 'shop:wishlist' %}">Выбранные</a>
+											
+										</li> -->
+										
+									<!-- 	<li>
+											
+											<a href="{% url 'shop:my_account' %}">Аккаунт</a>
+										</li>	 -->
+												
+										<li>
+											<a href="{% url 'shop:contact' %}">Контакты</a>
+										</li>	
+												
+										<!-- <li>
+											<a href="{% url 'shop:checkout' %}">Проверка</a>
+										</li> -->	
+					                  </div>
+										
+									</ul>
+								</nav>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- mainmenu-area-end -->
+			<!-- mobile-menu-area-start -->
+			<div class="mobile-menu-area visible-xs visible-sm">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="mobile_menu">
+								<nav id="mobile_menu_active">
+									<ul>
+										<li><a href="index.html">Home</a>
+											<ul>
+												
+										<li>
+											<a  href="{% url 'shop:index' %}">Главная</a>
+										</li>		
+										<li>
+											<a  href="{% url 'shop:blog' %}">Блог</a>
+											
+										</li>
+										<li>
+											<a href="{% url 'shop:shop' %}">Магазин</a>
+											
+										</li>
+										
+									<!-- 	<li>
+											<a href="{% url 'shop:wishlist' %}">Выбранное</a>
+											
+										</li> -->
+										
+									<!-- 	<li>
+											
+											<a href="{% url 'shop:my_account' %}">Аккаунт</a>
+										</li>	
+												 -->
+										<li>
+											<a href="{% url 'shop:contact' %}">Контакты</a>
+										</li>	
+												
+										<!-- <li>
+											<a href="{% url 'shop:checkout' %}">Проверка</a>
+										</li> -->	
+										</ul>		
+								</nav>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- mobile-menu-area-end -->
+		</header>

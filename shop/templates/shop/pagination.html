@@ -1,0 +1,51 @@
+<!-- <div class="pagination">  
+ <span class="step-links">  
+  {% if page.has_previous %}  
+      <a href="?page={{ page.previous_page_number }}">След.</a>  
+  {% endif %}  
+    <span class="current">  
+  Page {{ page.number }} of {{ page.paginator.num_pages }}.  
+    </span>  
+  {% if page.has_next %}  
+        <a href="?page={{ page.next_page_number }}">Пред.</a>  
+  {% endif %}  
+  </span>  
+</div> -->
+
+
+                        <div class="shop-pagination">
+                            <div class="row">
+                                <div class="col-md-6 col-xs-6">
+                                    <div class="product-count">
+                                        Showing 1 - 12 of 13 items
+                                    </div>
+                                    <ul class="pagination">
+                                       {% if page_obj.has_previous %}
+                                        <li class="pagination-previous-bottom">
+                                            <a href="?page={{ page_obj.previous_page_number }}">
+                                                <i class="fa fa-angle-left"></i>
+                                            </a>
+                                        </li>
+                                        {% endif %}
+                                        <li class="active current">
+                                            <a href="shop.html">
+                                                1
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="shop.html">
+                                                2
+                                            </a>
+                                        </li>
+                                         {% if page_obj.has_next %}
+                                        <li class="pagination-next-bottom">
+                                            <a href="page_obj.next_page_number">
+                                                <i class="fa fa-angle-right"></i>
+                                            </a>
+                                        </li>
+                                        {% endif %}
+                                    </ul>
+                                </div>
+                                
+                            </div>
+                        </div>

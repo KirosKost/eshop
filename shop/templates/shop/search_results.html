@@ -1,0 +1,386 @@
+
+
+{% extends 'shop/index.html' %}
+{% load static %}
+ {% block title %}<title>Home three || Vonia</title>{% endblock %}
+
+
+{% block content %}
+		<!-- header-end -->
+		<!-- shop-2-area-start -->
+		<div class="shop-2-area">
+			<div class="container">
+				<div class="row">
+					<div class="left-column col-sm-3">
+						<div class="left-column-block">
+							<h1>Каталог</h1>
+							<div class="block-content">
+								<div class="content-box">
+									<h3 class="content-box-heading">
+										Категории
+									</h3>
+									<ul>
+										<li>
+											<span class="checkit">
+												<input class="checkbox" type="checkbox">
+											</span>
+											<label class="check-label">
+												<a href="shop.html">Сумки (13)</a>
+											</label>
+										</li>
+										<li>
+											<span class="checkit">
+												<input class="checkbox" type="checkbox">
+											</span>
+											<label class="check-label">
+												<a href="shop.html">Футболки (13)</a>
+											</label>
+										</li>
+										<li>
+											<span class="checkit">
+												<input class="checkbox" type="checkbox">
+											</span>
+											<label class="check-label">
+												<a href="shop.html">Бельё (13)</a>
+											</label>
+										</li>
+									</ul>
+								</div>
+								<div class="content-box">
+									<h3 class="content-box-heading">
+										Доступные товары
+									</h3>
+									<ul>
+										<li>
+											<span class="checkit">
+												<input class="checkbox" type="checkbox">
+											</span>
+											<label class="check-label">
+												<a href="shop.html">На складе(13)</a>
+											</label>
+										</li>
+									</ul>
+								</div>
+								<div class="content-box">
+									<h3 class="content-box-heading">
+										Состояние
+									</h3>
+									<ul>
+										<li>
+											<span class="checkit">
+												<input class="checkbox" type="checkbox">
+											</span>
+											<label class="check-label">
+												<a href="shop.html">Новинки (13)</a>
+											</label>
+										</li>
+									</ul>
+								</div>
+								<div class="content-box">
+									<h3 class="content-box-heading">
+										Производитель
+									</h3>
+									<ul>
+										<li>
+											<span class="checkit">
+												<input class="checkbox" type="checkbox">
+											</span>
+											<label class="check-label">
+												<a href="shop.html">Производитель одежды (13)</a>
+											</label>
+										</li>
+									</ul>
+								</div>
+								<div class="content-box">
+									<h3 class="content-box-heading">Цена</h3>
+									<div class="info_widget">
+										<div class="price_filter">
+											<div id="slider-range"></div>
+												<div class="price_slider_amount">
+												<input type="text" id="amount" name="price"  placeholder="Add Your Price" />
+												<input type="submit"  value="Range"/>  
+											</div>
+										</div>
+									</div>	
+								</div>
+								<div class="content-box">
+									<h3 class="content-box-heading">Размер</h3>
+									<ul>
+										<li>
+											<span class="checkit">
+												<input class="checkbox" type="checkbox">
+											</span>
+											<label class="check-label">
+												<a href="shop.html">S (13)</a>
+											</label>
+										</li>
+										<li>
+											<span class="checkit">
+												<input class="checkbox" type="checkbox">
+											</span>
+											<label class="check-label">
+												<a href="shop.html">L (13)</a>
+											</label>
+										</li>
+										<li>
+											<span class="checkit">
+												<input class="checkbox" type="checkbox">
+											</span>
+											<label class="check-label">
+												<a href="shop.html">M (13)</a>
+											</label>
+										</li>
+									</ul>
+								</div>
+								<div class="content-box">
+									<h3 class="content-box-heading">
+										Color
+									</h3>
+									<ul>
+										<li>
+											<input class="color-option Beige" type="checkbox">
+											<label class="check-label">
+												<a href="shop.html">Бежевый (2)</a>
+											</label>
+										</li>
+										<li>
+											<input class="color-option white" type="checkbox">
+											<label class="check-label">
+												<a href="shop.html">Белый (4)</a>
+											</label>
+										</li>
+										<li>
+											<input class="color-option black" type="checkbox">
+											<label class="check-label">
+												<a href="shop.html">Черный (4)</a>
+											</label>
+										</li>
+										<li>
+											<input class="color-option orange" type="checkbox">
+											<label class="check-label">
+												<a href="shop.html">Оранжевый (5)</a>
+											</label>
+										</li>
+										<li>
+											<input class="color-option blue" type="checkbox">
+											<label class="check-label">
+												<a href="shop.html">Синий (3)</a>
+											</label>
+										</li>
+										<li>
+											<input class="color-option green" type="checkbox">
+											<label class="check-label">
+												<a href="shop.html">Зеленый (2)</a>
+											</label>
+										</li>
+										<li>
+											<input class="color-option yellow" type="checkbox">
+											<label class="check-label">
+												<a href="shop.html">Желтый (6)</a>
+											</label>
+										</li>
+										<li>
+											<input class="color-option pink" type="checkbox">
+											<label class="check-label">
+												<a href="shop.html">Розовый (2)</a>
+											</label>
+										</li>
+									</ul>
+								</div>
+								<div class="content-box">
+									<h3 class="content-box-heading">
+										Материал
+									</h3>
+									<ul>
+										<li>
+											<span class="checkit">
+												<input class="checkbox" type="checkbox">
+											</span>
+											<label class="check-label">
+												<a href="shop.html">Хлопок (5)</a>
+											</label>
+										</li>
+										<li>
+											<span class="checkit">
+												<input class="checkbox" type="checkbox">
+											</span>
+											<label class="check-label">
+												<a href="shop.html">Полиэстер (4)</a>
+											</label>
+										</li>
+										<li>
+											<span class="checkit">
+												<input class="checkbox" type="checkbox">
+											</span>
+											<label class="check-label">
+												<a href="shop.html">Вискоза (4)</a>
+											</label>
+										</li>
+									</ul>
+								</div>
+								<div class="content-box">
+									<h3 class="content-box-heading">
+										Стили
+									</h3>
+									<ul>
+										<li>
+											<span class="checkit">
+												<input class="checkbox" type="checkbox">
+											</span>
+											<label class="check-label">
+												<a href="shop.html">Повседневный (5)</a>
+											</label>
+										</li>
+										<li>
+											<span class="checkit">
+												<input class="checkbox" type="checkbox">
+											</span>
+											<label class="check-label">
+												<a href="shop.html"> Коктельный (2)</a>
+											</label>
+										</li>
+										<li>
+											<span class="checkit">
+												<input class="checkbox" type="checkbox">
+											</span>
+											<label class="check-label">
+												<a href="shop.html"> Молодежный (6)</a>
+											</label>
+										</li>
+									</ul>
+								</div>
+								<div class="content-box">
+									<h3 class="content-box-heading">
+										Свойства
+									</h3>
+									<ul>
+										<li>
+											<span class="checkit">
+												<input class="checkbox" type="checkbox">
+											</span>
+											<label class="check-label">
+												<a href="shop.html">Цветные платья (2)</a>
+											</label>
+										</li>
+										<li>
+											<span class="checkit">
+												<input class="checkbox" type="checkbox">
+											</span>
+											<label class="check-label">
+												<a href="shop.html">Длинные Платья (2)</a>
+											</label>
+										</li>
+										<li>
+											<span class="checkit">
+												<input class="checkbox" type="checkbox">
+											</span>
+											<label class="check-label">
+												<a href="shop.html">Средняя длина (2)</a>
+											</label>
+										</li>
+										<li>
+											<span class="checkit">
+												<input class="checkbox" type="checkbox">
+											</span>
+											<label class="check-label">
+												<a href="shop.html">Коротокие платья (4)</a>
+											</label>
+										</li>
+										<li>
+											<span class="checkit">
+												<input class="checkbox" type="checkbox">
+											</span>
+											<label class="check-label">
+												<a href="shop.html"> Юбки (3) </a>
+											</label>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="left-column-block left-col-mar">
+							<h1>Тэги</h1>
+							<div class="tags">
+								<a href="shop.html">новинки</a>
+								<a href="shop.html">мода</a>
+								
+								<a href="shop.html">скидки</a>
+							
+								<a href="shop.html">легкие</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-9">
+						
+						<div class="shop-heading">
+							<!-- <h2>bedding</h2> -->
+							<span>13 товаров.</span>
+						</div>
+						<div class="clearfix"></div>
+						<div class="category-products">
+							
+							<div class="shop-category-product">
+								<div class="row">
+									<div class="category-product">
+										<!-- Tab panes -->
+										
+										<div class="tab-content">
+
+											<div role="tabpanel" class="tab-pane active fade in" id="gried_view">
+
+														<h1>Search Results</h1>
+
+<ul>
+  {% for product in object_list %}
+    <li>
+      {{ product.name }}, {{ product.category }}
+    </li>
+  {% endfor %}
+</ul>
+												
+		<!-- contact-us-end -->
+
+	
+										</div>
+										
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="shop-pagination">
+							<div class="row">
+								<div class="col-md-6 col-xs-6">
+									<div class="product-count">
+										показано 1 - 12 из 13 товаров
+									</div>
+									<ul class="pagination">
+										<li class="pagination-previous-bottom">
+											<a href="blog.html">
+												<img src="https://img.icons8.com/nolan/15/chevron-left.png"/>
+											</a>
+										</li>
+										<li class="active current">
+											<a href="shop.html">
+												1
+											</a>
+										</li>
+										
+										<li class="pagination-next-bottom">
+											<a href="blog.html">
+												<img src="https://img.icons8.com/nolan/15/chevron-right.png"/>
+											</a>
+										</li>									</ul>
+								</div>
+							</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		{% endblock %}
+		<!--=====shop-2-area-end=====-->
+		<!--===== brand-area-start =====-->
+		
+		<!-- brand-area-end -->
+		<!-- footer-start -->

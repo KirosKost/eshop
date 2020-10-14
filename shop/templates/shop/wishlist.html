@@ -1,0 +1,111 @@
+{% extends 'shop/index.html' %}
+{% load static %}
+ {% block title %}<title>Home three || Vonia</title>{% endblock %}
+
+
+{% block content %}
+		<!-- header-end -->
+		<!-- wishlist-start -->
+		<div class="breadcrumb-area">
+			<div class="container">
+				<div class="breadcrumb">
+					<a href="index.html" title="Return to Home">
+						<i class="icon-home"></i>
+					</a>
+					<span class="navigation-pipe">></span>
+					<span class="navigation-page">
+						Wishlist
+					</span>
+				</div>
+			</div>
+		</div>
+		<div class="wishlist-area">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="entry-header">
+							<h1 class="entry-title">Wishlist</h1>
+						</div>
+						<div class="wishlist-content">
+							<form action="wishlist.html">
+								<div class="wishlist-table table-responsive">
+									<table>
+										<thead>
+											<tr>
+												<th class="product-remove">
+													<span class="nobr">Remove</span>
+												</th>
+												<th class="product-thumbnail">Image</th>
+												<th class="product-name">
+													<span class="nobr">Product Name</span>
+												</th>
+												<th class="product-price">
+													<span class="nobr"> Unit Price </span>
+												</th>
+												<th class="product-stock-stauts">
+													<span class="nobr"> Stock Status </span>
+												</th>
+												<th class="product-add-to-cart">
+													<span class="nobr">add-to-cart </span>
+												</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td class="product-remove">
+													<a href="wishlist.html">×</a>
+												</td>
+												<td class="product-thumbnail">
+													<a href="wishlist.html">
+														<img src="http://preview.hasthemes.com/vonia-preview/vonia/img/wishlist/1.jpg" alt="" />
+													</a>
+												</td>
+												<td class="product-name">
+													<a href="wishlist.html">Vestibulum suscipit</a>
+												</td>
+												<td class="product-price">
+													<span class="amount">£165.00</span>
+												</td>
+												<td class="product-stock-status">
+													<span class="wishlist-in-stock">In Stock</span>
+												</td>
+												<td class="product-add-to-cart">
+													<a href="wishlist.html"> Add to Cart</a>
+												</td>
+											</tr>
+											<tr>
+												<td class="product-remove">
+													<a href="wishlist.html">×</a>
+												</td>
+												<td class="product-thumbnail">
+													<a href="wishlist.html">
+														<img src="http://preview.hasthemes.com/vonia-preview/vonia/img/wishlist/2.jpg" alt="" />
+													</a>
+												</td>
+												<td class="product-name">
+													<a href="wishlist.html">Vestibulum dictum magna</a>
+												</td>
+												<td class="product-price">
+													<span class="amount">£50.00</span>
+												</td>
+												<td class="product-stock-status">
+													<span class="wishlist-in-stock">In Stock</span>
+												</td>
+												<td class="product-add-to-cart">
+													<a href="wishlist.html"> Add to Cart</a>
+												</td>
+											</tr>
+										</tbody>
+										<tfoot>
+											
+										</tfoot>
+									</table>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+{% endblock %}

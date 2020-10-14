@@ -1,0 +1,430 @@
+{% load static %}
+<!doctype html>
+
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        {% block title %}<title>Shop</title>{% endblock %}
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="{% static 'img/favicon.ico' %}" type="image/x-icon" rel="shortcut icon">
+        <!-- Place favicon.ico in the root directory -->
+		<!-- google font -->
+		<link href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800,300' rel='stylesheet' type='text/css'>
+		<!-- all css here -->
+		<!-- bootstrap v3.3.6 css -->
+        <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+		<!-- animate css -->
+        <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+		<!-- jquery-ui.min css -->
+        <link rel="stylesheet" href="{% static 'css/jquery-ui.min.css' %}">
+		<!-- meanmenu css -->
+        <link rel="stylesheet" href="{% static 'css/meanmenu.min.css' %}">
+		<!-- owl.carousel css -->
+        <link rel="stylesheet" href="{% static 'css/owl.carousel.css' %}">
+		<!-- font-awesome css -->
+        <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+		<!-- nivo-slider css -->
+        <link rel="stylesheet" href="{% static 'css/nivo-slider.css' %}">
+		<!-- style css -->
+		<link rel="stylesheet" href="{% static 'style.css' %}">
+		
+        <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+		<!-- modernizr css -->
+        <script src=" {% static 'js/vendor/modernizr-2.8.3.min.js' %}"></script>
+    </head>
+    <body>
+     
+           <!--  <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        -->
+		<!-- header-start -->
+		{% include 'shop/header.html' %}
+		<!--=====header-end=====-->
+		<!--=====slider-and-banner-start=====-->
+		{% block content %}
+	
+		<!--=====service-end=====-->
+		<!--=====product-tab-start=====-->
+		<div class="home-2-product-tab">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="feature-tab-area">
+                            <!-- Nav tabs -->
+                            <ul class="tabs" role="tablist">
+    							<li role="presentation" class="active"><a href="index.html#newarrival" aria-controls="newarrival" role="tab" data-toggle="tab">Новое поступление</a></li>							   
+							   
+                            </ul>
+                            <div class="tab-content">
+								<div role="tabpanel" class="tab-pane active fade in" id="newarrival">
+									<div class="row">
+										<div class="product-carousel">
+											<!-- single-product start -->
+											{% for p in product %}
+											<div class="col-md-12">
+												
+												<div class="single-product">
+													<div class="product-img">
+														<a href="{% url 'shop:detail' %}">
+															<img src="{{ p.image.url }}" alt="" />
+														
+														
+														</a>
+														<!-- <span class="new">{{ p.new }}</span>
+														<span class="sale">{{ p.sale }}</span> -->
+														<div class="product-action">
+															<div class="add-to-links">
+																<ul>
+																	<li>
+																		<form action="{% url 'cart:cart_add' p.id %}" method="POST">
+																			{% csrf_token %}
+																			{{ cart_product_form }}
+																			<input type="submit" value="Добавить в корзину">
+																		</form>
+																	</li>
+																	
+																	
+																</ul>
+																<div class="quick-view">
+																	<a href="index.html" data-toggle="modal" data-target="#myModal" title="Quick view">
+																		<span>Quick view</span>
+																	</a>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="product-content">
+														<h5 class="product-name">
+															<a href="{% url 'shop:detail' %}" title="">{{ p.name }}</a>
+														</h5>
+														<div class="reviews">
+															<div class="star-content clearfix">
+																<span class="star star-on"></span>
+																<span class="star star-on"></span>
+																<span class="star star-on"></span>
+																<span class="star star-on"></span>
+																<span class="star star-on"></span>
+															</div>
+															<div class="comment">
+																<span class="reviewcount">1</span>
+																 Review(s)
+															</div>
+														</div>
+														<div class="price-box">
+															<span class="price"> {{ p.price }} </span>
+															<span class="old-price"> {{ p.price2 }} </span>
+														</div>
+													</div>
+												</div>
+												
+											
+													
+														
+													</div>
+													{%  endfor %}
+													
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!--=====product-tab-end=====-->
+		<!--=====special-look-start=====-->
+		
+		
+		<!--=====special-look-end=====-->
+		<!--===== latest-blog-start =====-->
+		<div class="latest-blog">
+			<div class="container">
+				<div class="blog">
+					<div class="product-title">
+						<h2>
+							<span>Последние Новости</span>
+						</h2>
+					</div>
+					<div class="row">
+						<div class="blogs-carousel">
+						
+							<div class="col-md-12">
+								<div class="single-blog">
+									<div class="blog-img">
+										<a href="{% url 'shop:blog' %}">
+											<img src="{% static 'img/latest-blog/3.jpg' %}" alt="" />
+										</a>
+									</div>
+									<div class="blog-content">
+										<h4 class="blog-title">
+											<a href="{% url 'shop:blog' %}">Answers to your Questions about...</a>
+										</h4>
+										<p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+										Lorem Ipsum has been...
+										</p>
+										<span class="blog-date">2016-03-09 13:40:04</span>
+										
+									</div>
+								</div>
+							</div>
+							
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--===== latest-blog-end =====-->
+	
+		<!--===== brand-area-start =====-->
+		
+		<!-- brand-area-end -->
+		{% endblock %}
+		<!-- footer-start -->
+		<footer>
+			<div class="footer-area">
+				<div class="footer-top">
+					<div class="container">
+						
+					</div>
+				</div>
+				<div class="footer-middle">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-9 col-sm-9 foot-mar">
+								<div class="row">
+									<div class="col-md-4  col-sm-4 col-xs-12">
+										<h4>Адресс компании</h4>
+										<div class="footer-contact">
+											<p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+											Duis dignissim erat ut laoreet pharetra....
+											</p>
+											<p class="address add">
+												<span>No. 96, Jecica City, NJ 07305, New York, USA</span>
+											</p>
+											<p class="phone ">
+												<span> +8801973 833508</span>
+											</p>
+											<p class="email">
+												<a href="index.html">admin@bootexperts.com</a>
+											</p>
+
+										</div>
+										
+									</div>
+									<div class="col-md-4 col-sm-4 col-xs-12">
+										<h4>Информация</h4>
+										<ul>
+											<li>
+												<a title="Contact us" href="{% url 'shop:contact' %}">Контакты</a>
+											</li>
+											<li>
+												<a title="Our blog" href="{% url 'shop:blog' %}">Блог</a>
+											</li>
+											
+										</ul>
+									</div>
+									<!-- <div class="col-md-4 col-sm-4 col-xs-12">
+										<h4>My account</h4>
+										<ul> 
+											<li>
+												<a title="My orders" href="index.html">My orders</a>
+											</li>
+											<li>
+												<a title="My credit slips" href="index.html"> My credit slips</a>
+											</li>
+											<li>
+												<a title="My addresses" href="index.html">My addresses</a>
+											</li>
+											<li>
+												<a title="My personal info" href="index.html">My personal info</a>
+											</li>
+										</ul>
+									</div> -->
+								</div>
+							</div>
+							<div class="col-md-3 col-sm-3">
+								<div class="newsletter">
+									<h4>Подписка на новости</h4>
+									<div class="newsletter-content">
+										<form action="http://preview.hasthemes.com/vonia-preview/vonia/method">
+											<input class="newsletter-input" type="text" placeholder="Enter your e-mail" size="18" name="mail">
+											<button class="btn btn-default newsletter-button" type="submit">
+												<span class="subscribe">Подписаться</span>
+											</button>
+										</form>
+									</div>
+								</div>
+								  <div class="social-icons">
+								 <h3>Подписывайтесь</h3>
+									 <a target= '_blank' href="https://www.instagram.com/"><img src="https://img.icons8.com/nolan/36/instagram-new.png"/></a>
+									<a target= '_blank' href="https://vk.com/"><img src="https://img.icons8.com/nolan/36/vk-com.png"/></a>
+								</div>
+
+							</div>
+
+						</div>
+						
+					</div>
+				</div>
+				<!-- <div class="footer-bottom">
+					<div class="container">
+						<div class="row"> -->
+							
+							<!-- div class="col-md-6 col-sm-6 col-xs-12 footer-link">
+								<ul>
+									<li>
+										<a href="index.html">Customer Service</a>
+									</li>
+									<li>
+										<a href="index.html">Secure payment</a>
+									</li>
+									<li>
+										<a href="index.html">Term of Use</a>
+									</li>
+									<li>
+										<a href="index.html">About us</a>
+									</li>
+								</ul>
+							</div> -->
+					<!-- 	</div>
+					</div>
+				</div> -->
+			</div>
+		</footer>
+		<!-- footer-end -->
+		<!-- modal start -->
+		<div class="modal fade" id="myModal" role="dialog">
+			<div class="modal-dialog">
+			
+				<!-- Modal content-->
+				<div class="modal-content">
+					<div class="row">
+						<div class="col-md-5 col-sm-5 col-xs-6">
+							<div class="modal-pic" title="Printed Chiffon Dress">
+								<a href="index.html#">
+									<img src="{% static 'img/modal/printed-chiffon-dress.jpg' %}" alt="" />
+								</a>
+								<span class="new">Новинка</span>
+								<span class="sale">Скидка!</span>
+							</div>
+						</div>
+						<div class="col-md-7 col-sm-7 col-xs-6">
+							<h1>Faded Short Sleeves T-shirt</h1>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+							<p class="reference">
+								<label>Reference: </label>
+								<span>demo_1</span>
+							</p>
+							<p class="condition">
+								<label>Condition: </label>
+								<span>New product</span>
+							</p>
+							<div class="content-price">
+								<p class="price-new">
+									<span class="price-box">£ 16.84</span>
+									<span class="price-tax"> tax incl.</span>
+								</p>
+							</div>
+							<div class="short-description">
+								<p>Faded short sleeves t-shirt with high neckline. Soft and stretchy material for a comfortable fit. 
+								Accessorize with a straw hat and you're ready for summer!
+								</p>
+							</div>
+							<form action="#">
+								<div class="shop-product-add">
+									<div class="add-cart">
+										<p class="quantity cart-plus-minus">
+											<label>Quantity</label>
+											<input id="quantity_wanted" class="text" type="text" value="1" name="qty" style="border: 1px solid rgb(189, 194, 201);">
+										
+										</p>
+										<div class="shop-add-cart">
+											<button class="exclusive">
+												<span>Добавить в коризину</span>
+											</button>
+										</div>
+									</div>
+									<div class="clearfix"></div>
+									<div class="size-color">
+										<fieldset class="size">
+											<label>Размер</label>
+											<div class="selector">
+												<select id="group_1" class="form-control" name="group_1">
+													<option title="S" selected="selected" value="1">S</option>
+													<option title="M" value="2">M</option>
+													<option title="L" value="3">L</option>
+												</select>
+											</div>
+										</fieldset>
+										<fieldset class="color">
+											<label>Цвет</label>
+											<div class="color-selector">
+												<ul>
+													<li><a class="color-1" href="index.html"></a></li>
+													<li><a class="color-2" href="index.html"></a></li>
+												</ul>
+											</div>
+										</fieldset>
+									</div>
+								</div>
+							</form>
+							<!-- <div class="clearfix"></div>
+							<p class="quantity-available">
+								<span>299</span>
+								<span>Items</span>
+							</p>
+							<p class="availability-status">
+								<span>In stock</span>
+							</p>
+							<p class="social-sharing">
+								<button class="btn btn-default btn-twitter">
+									<i class="icon-twitter"></i>
+									Tweet
+								</button>
+								<button class="btn btn-default btn-facebook">
+									<i class="icon-facebook"></i>
+									Share
+								</button>
+							
+							</p> -->
+						</div>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+		<!-- modal end -->
+		<!-- all js here -->
+		<!-- jquery latest version -->
+        <script src="{% static 'js/vendor/jquery-1.12.0.min.js' %}"></script>
+		<!-- bootstrap js -->
+        <script src="{% static 'js/bootstrap.min.js' %}"></script>
+		<!--jquery scrollUp js -->
+        <script src="{% static 'js/jquery.scrollUp.js' %}"></script>
+		<!-- owl.carousel js -->
+        <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+		<!-- meanmenu js -->
+        <script src="{% static 'js/jquery.meanmenu.js' %}"></script>
+		<!-- jquery-ui js -->
+        <script src="{% static 'js/jquery-ui.min.js' %}"></script>
+		<!-- wow js -->
+        <script src="{% static 'js/wow.min.js' %}"></script>
+		<!-- nivo slider js -->
+        <script src="{% static 'js/jquery.nivo.slider.pack.js' %}"></script>
+		<!-- countdown js -->
+        <script src="{% static 'js/countdown.js' %}"></script>
+		<!-- plugins js -->
+        <script src="{% static 'js/plugins.js' %}"></script>
+		<!-- main js -->
+        <script src="{% static 'js/main.js' %}"></script>
+    </body>
+</html>

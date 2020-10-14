@@ -1,0 +1,52 @@
+{% extends "shop/index.html" %}
+{% load static %}
+
+{% block content %}
+<h1>Checkout</h1>
+<div class="order-info">
+<h3>Your order</h3>
+<ul>
+{% for item in cart %}
+<li>
+{{ item.quantity }}x {{ item.product.name }}
+<span>${{ item.total_price }}</span>
+</li>
+{% endfor %}
+</ul>
+<p>Total: ${{ cart.get_total_price }}</p>
+</div>
+<div class="checkout-wrap pt-30">
+                    <div class="row">
+                        <div class="col-lg-7">
+                            <form action="{% url 'cart:ordersend' %}" method="POST">
+                            <div class="billing-info-wrap mr-50">
+                                <h3>Заполните форму</h3>
+                                {% csrf_token %}
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-6">
+                                        <div class="billing-info mb-20">
+                                            <label>Имя </label>
+                                            <input name="name" type="text">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6">
+                                        <div class="billing-info mb-20">
+                                            <label>Номер телефона </label>
+                                            <input name="phone" type="text">
+                                        </div>
+                                    </div>
+                                 
+                                </div>
+                                <div class="checkout-account-toggle open-toggle2 mb-30">
+                                    <label>Электронная почта</label>
+                                    <input placeholder="example@gmail.com" name="mail">
+                                </div>
+                                <div class="col-md-12">
+                                    <input type="submit" class="btn btn-main btn-block" value="Подтвердить заказ">
+                                </div>
+                            </div>
+                            </form>
+                        </div>
+                        </div>
+                        </div>	
+{% endblock %}

@@ -1,0 +1,72 @@
+{% extends 'shop/index.html' %}
+{% load static %}
+{% block title %}<title>Home three || Vonia</title>{% endblock %}
+
+{% block content %}
+		<!-- header-end -->
+		<!-- contact-us-start -->
+		<div class="contact-us-area">
+			<div class="container">
+				<div class="breadcrumb-area">
+					<div class="container">
+						<div class="breadcrumb">
+							<a href="index.html" title="Return to Home">
+								<i class="icon-home"></i>
+							</a>
+							<span class="navigation-pipe">></span>
+							<span class="navigation-page">
+								Contact
+							</span>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12 col-sm-12 col-xs-12">
+						<div class="entry-header">
+							<h1 class="entry-title">Customer service - Contact us</h1>
+						</div>
+						<form action="{% url 'shop:applications' %}" method="POST" >
+								<div class="row">
+									<div class="col-xs-12 col-md-3">
+										{% csrf_token %}
+										<div class="form-group">
+											<label>Имя</label>
+											<div class="shop-select">
+												<input name="name" id="name">
+											</div>											
+										</div>
+										<div class="form-group">
+											<label>Электронная почта</label>
+											<div class="shop-select">
+												<input name="mail" id="email">
+											</div>											
+										</div>
+									</div>
+									<div class="col-xs-12 col-md-9">
+											<div class="form-group">
+												<label for="comment">Сообщение</label>
+												<div class="shop-select">
+												<textarea name="comment" id="message"></textarea>
+												</div>											
+											</div>										
+									</div>
+
+								</div>
+								<!-- <input type="submit"> -->
+								<div class="submit">
+									<button class="button btn btn-default button-medium" type="submit">
+										<span>
+											send
+											<i class="icon-chevron-right right"></i>
+										</span>
+									</button>
+								</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- contact-us-end -->
+		
+		<!-- footer-start -->
+{% endblock %}		
